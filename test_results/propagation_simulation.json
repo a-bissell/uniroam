@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-10-13T11:40:47.382754",
+  "total_robots": 10,
+  "final_infected": 3,
+  "infection_rate": 0.3,
+  "iterations": [
+    {
+      "iteration": 1,
+      "newly_infected": 1,
+      "total_infected": 2,
+      "infection_rate": 0.2
+    },
+    {
+      "iteration": 2,
+      "newly_infected": 1,
+      "total_infected": 3,
+      "infection_rate": 0.3
+    }
+  ]
+}

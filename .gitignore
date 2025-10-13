@@ -35,3 +35,23 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# UniRoam specific #
+####################
+__pycache__/            # Python cache files
+venv/                   # Virtual environment (Unix)
+venv\                   # Virtual environment (Windows)
+test_results/           # Test results (Unix)
+test_results\           # Test results (Windows)
+docs/                   # Documentation (Unix)
+docs\                   # Documentation (Windows)
+original_research/      # Original research (Unix)
+original_research\      # Original research (Windows)
+.vscode/                # VSCode settings (Unix)
+.vscode\                # VSCode settings (Windows)
+.idea/                  # IntelliJ settings (Unix)
+.idea\                  # IntelliJ settings (Windows)
+.env                    # Environment variables
+.env.local              # Local environment variables
+.env.development.local  # Development environment variables
+.env.test.local         # Test environment variables

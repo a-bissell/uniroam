@@ -1,0 +1,26 @@
+# Unitree Worm Framework - Python Dependencies
+
+# BLE Communication
+bleak>=0.21.0
+
+# Cryptography
+pycryptodomex>=3.19.0
+
+# Web Server & API
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# HTTP Client
+aiohttp>=3.9.0
+
+# Database
+# (sqlite3 is included in Python standard library)
+
+# Testing (optional)
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+
+# Development (optional)
+black>=23.0.0
+flake8>=6.0.0
+
