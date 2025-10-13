@@ -61,7 +61,9 @@ class C2Database:
                 hostname TEXT,
                 status TEXT,
                 parent_id TEXT,
-                infection_depth INTEGER DEFAULT 0
+                infection_depth INTEGER DEFAULT 0,
+                is_simulator INTEGER DEFAULT 0,
+                simulator_host TEXT
             )
         ''')
         
@@ -125,6 +127,10 @@ class C2Database:
         
         now = datetime.now().isoformat()
         
+        # Detect if this is a simulator based on ID prefix
+        is_simulator = 1 if robot_id.startswith(config.SIMULATOR_ID_PREFIX) else 0
+        simulator_host = data.get('hostname') if is_simulator else None
+        
         # Check if exists
         cursor.execute('SELECT robot_id FROM robots WHERE robot_id = ?', (robot_id,))
         exists = cursor.fetchone()
@@ -132,14 +138,14 @@ class C2Database:
         if exists:
             cursor.execute('''
                 UPDATE robots 
-                SET last_seen = ?, platform = ?, hostname = ?, status = ?
+                SET last_seen = ?, platform = ?, hostname = ?, status = ?, is_simulator = ?, simulator_host = ?
                 WHERE robot_id = ?
-            ''', (now, data.get('platform'), data.get('hostname'), 'active', robot_id))
+            ''', (now, data.get('platform'), data.get('hostname'), 'active', is_simulator, simulator_host, robot_id))
         else:
             cursor.execute('''
-                INSERT INTO robots (robot_id, first_seen, last_seen, platform, hostname, status)
-                VALUES (?, ?, ?, ?, ?, ?)
-            ''', (robot_id, now, now, data.get('platform'), data.get('hostname'), 'active'))
+                INSERT INTO robots (robot_id, first_seen, last_seen, platform, hostname, status, is_simulator, simulator_host)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (robot_id, now, now, data.get('platform'), data.get('hostname'), 'active', is_simulator, simulator_host))
         
         conn.commit()
         conn.close()
@@ -695,6 +701,21 @@ async def dashboard():
                 text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
             }
             
+            /* Simulator Styles (all themes) */
+            .robot-sim {
+                border-left: 4px solid #4caf50 !important;
+                background: rgba(76, 175, 80, 0.05) !important;
+            }
+            body.hacker .robot-sim {
+                border-left: 4px solid #00ff00 !important;
+                background: rgba(0, 255, 0, 0.1) !important;
+            }
+            .sim-icon {
+                display: inline-block;
+                margin-right: 5px;
+                font-size: 16px;
+            }
+            
             /* Common Styles */
             .stats-grid {
                 display: grid;
@@ -806,6 +827,7 @@ async def dashboard():
             <table id="robots-table">
                 <thead>
                     <tr>
+                        <th>Type</th>
                         <th>Robot ID</th>
                         <th>Platform</th>
                         <th>Hostname</th>
@@ -898,7 +920,16 @@ async def dashboard():
                 
                 data.robots.forEach(robot => {
                     const row = tbody.insertRow();
+                    const isSim = robot.is_simulator || robot.robot_id.startsWith('SIM_');
+                    const typeIcon = isSim ? '🤖' : '🦿';
+                    const typeLabel = isSim ? 'SIM' : 'REAL';
+                    
+                    if (isSim) {
+                        row.classList.add('robot-sim');
+                    }
+                    
                     row.innerHTML = `
+                        <td><span class="sim-icon" title="${typeLabel}">${typeIcon}</span></td>
                         <td>${robot.robot_id}</td>
                         <td>${robot.platform || 'Unknown'}</td>
                         <td>${robot.hostname || 'Unknown'}</td>

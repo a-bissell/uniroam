@@ -1,0 +1,40 @@
+# UniRoam Simulator Docker Image
+# Provides isolated sandbox for safe worm execution testing
+
+FROM python:3.11-slim
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    bluetooth \
+    bluez \
+    libglib2.0-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create workspace
+WORKDIR /workspace
+
+# Copy requirements
+COPY requirements.txt /tmp/requirements.txt
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+# Copy simulator files
+COPY robot_simulator.py /opt/uniroam/
+COPY virtual_ble.py /opt/uniroam/
+COPY command_sandbox.py /opt/uniroam/
+COPY uniroam/ /opt/uniroam/uniroam/
+
+# Set Python path
+ENV PYTHONPATH=/opt/uniroam
+
+# Create non-root user for sandbox
+RUN useradd -m -s /bin/bash simulator && \
+    chown -R simulator:simulator /workspace
+
+USER simulator
+
+# Default command
+CMD ["bash"]
+

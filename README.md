@@ -9,7 +9,7 @@
   <img src="https://img.shields.io/badge/Status-Research-red.svg" alt="Status">
 </p>
 
-**UniRoam** is an advanced autonomous robot worm framework for security research and red team operations. Built upon the [original UniPwn vulnerability research](https://github.com/Bin4ry/UniPwn), UniRoam demonstrates self-propagating malware capabilities targeting Unitree robotic platforms.
+**UniRoam** is an autonomous robot worm framework for security research and red team operations. Built upon the [original UniPwn vulnerability research](https://github.com/Bin4ry/UniPwn), UniRoam demonstrates self-propagating malware capabilities targeting Unitree robotic platforms.
 
 ## 🎯 What is UniRoam?
 
@@ -217,8 +217,7 @@ This software is for authorized security research only. Unauthorized use may vio
 
 - Original UniPwn research team
 - Unitree Robotics (platform)
-- Security research community
-- Open source contributors
+- DC608
 
 ---
 
@@ -231,5 +230,5 @@ This software is for authorized security research only. Unauthorized use may vio
 
 **Version**: 1.0  
 **Released**: January 2025  
-**Status**: Production-Ready for Research Use
+**Status**: Alpha
 
