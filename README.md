@@ -30,15 +30,12 @@ UniRoam extends the original CVE research (CVE-2025-35027, CVE-2025-60017, CVE-2
 
 ## ⚠️ WARNING - Research Tool Only
 
-**This is a RED TEAM RESEARCH TOOL.** Unauthorized use against systems you do not own is **illegal**. UniRoam is provided for:
+**This is a RED TEAM RESEARCH TOOL.** 
+If not used carefully, containment can be tricky in target-rich envrionments. 
+You may break your robot if you send a bad payload. 
 
-✅ Security research in controlled environments  
-✅ Red team training and exercises  
-✅ Developing defensive countermeasures  
-✅ Educational purposes  
-✅ Authorized penetration testing  
-
-❌ Unauthorized access or malicious attacks  
+Be smart, be responsible. 
+ 
 
 ## 🚀 Quick Start
 
