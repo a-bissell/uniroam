@@ -10,7 +10,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Architecture](#architecture)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This framework implements a complete wormable attack against Unitree robotic platforms (Go2, G1, H1, B2 series), featuring:
 
@@ -37,24 +37,24 @@ This framework implements a complete wormable attack against Unitree robotic pla
 
 ### Key Features
 
-✅ **BLE-Based Propagation** - Infects nearby robots wirelessly  
-✅ **WiFi Network Spreading** - Lateral movement across networks  
-✅ **Persistent Infection** - Survives reboots via systemd, cron, rc.local  
-✅ **C2 Dashboard** - Real-time monitoring and control  
-✅ **Anti-Detection** - Traffic encryption, sandbox evasion, log cleaning  
-✅ **Modular Architecture** - Easy to extend and customize  
-✅ **Testing Framework** - Comprehensive test suite included  
+ **BLE-Based Propagation** - Infects nearby robots wirelessly  
+ **WiFi Network Spreading** - Lateral movement across networks  
+ **Persistent Infection** - Survives reboots via systemd, cron, rc.local  
+ **C2 Dashboard** - Real-time monitoring and control  
+ **Anti-Detection** - Traffic encryption, sandbox evasion, log cleaning  
+ **Modular Architecture** - Easy to extend and customize  
+ **Testing Framework** - Comprehensive test suite included  
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                    C2 Server (c2_server.py)                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────┐  │
-│  │  REST API    │  │  Database    │  │  Web Dashboard  │  │
-│  └──────────────┘  └──────────────┘  └─────────────────┘  │
+│  ┌──────────────┐  ┌──────────────┐  ┌─────────────────┐    │
+│  │  REST API    │  │  Database    │  │  Web Dashboard  │    │
+│  └──────────────┘  └──────────────┘  └─────────────────┘    │
 └────────────────────────────┬────────────────────────────────┘
                              │ HTTPS/DNS Tunnel
          ┌───────────────────┼───────────────────┐
@@ -66,16 +66,16 @@ This framework implements a complete wormable attack against Unitree robotic pla
          │                   │                   │
     ┌────▼──────────────────▼───────────────────▼────┐
     │        Worm Agent (worm_agent.py)              │
-    │  ┌──────────┐  ┌──────────┐  ┌─────────────┐  │
-    │  │ Exploit  │  │Propagate │  │ Persistence │  │
-    │  │  Lib     │  │  Engine  │  │   Manager   │  │
-    │  └──────────┘  └──────────┘  └─────────────┘  │
+    │  ┌──────────┐  ┌──────────┐  ┌─────────────┐   │
+    │  │ Exploit  │  │Propagate │  │ Persistence │   │
+    │  │  Lib     │  │  Engine  │  │   Manager   │   │
+    │  └──────────┘  └──────────┘  └─────────────┘   │
     └────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📦 Components
+## Components
 
 ### Core Modules
 
@@ -150,7 +150,7 @@ python3 test_worm.py --all
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Quick Start: Standalone Exploitation
 
@@ -371,7 +371,7 @@ Command Line:
 
 ---
 
-## 🔬 Mitigation Strategies
+## Mitigation Strategies
 
 ### Immediate Actions
 
@@ -426,14 +426,10 @@ Command Line:
    - Log all robot communications
    - Alert on new systemd services
 
-5. **Patch Management**
-   - Apply security updates promptly
-   - Subscribe to security advisories
-   - Regular security assessments
 
 ---
 
-## 📊 Testing & Validation
+## Testing & Validation
 
 ### Run Test Suite
 
@@ -461,7 +457,7 @@ python3 worm_agent.py --debug
 
 ---
 
-## ⚖️ Legal & Ethical Considerations
+## Legal & Ethical Considerations
 
 ### Responsible Use
 
@@ -479,8 +475,7 @@ This framework is **NOT** for:
 - ❌ Commercial exploitation without permission
 
 ### Legal Notice
-
-⚖️ **WARNING**: Unauthorized use of this software may violate laws including but not limited to:
+ **WARNING**: Unauthorized use of this software may violate laws including but not limited to:
 - Computer Fraud and Abuse Act (CFAA) - USA
 - Computer Misuse Act - UK
 - Criminal Code (Section 342.1) - Canada
@@ -500,7 +495,7 @@ CVEs assigned:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions for defensive improvements are welcome:
 
@@ -518,7 +513,7 @@ Focus areas:
 
 ---
 
-## 📝 License
+## License
 
 This project maintains the original CC BY-NC-SA 4.0 license from the base research.
 
@@ -526,7 +521,7 @@ This project maintains the original CC BY-NC-SA 4.0 license from the base resear
 
 ---
 
-## 👥 Credits
+## Credits
 
 **Original Research**: Bin4ry (Andreas Makris), h0stile (Kevin Finisterre), legion1581 (Konstantin Severov)
 
