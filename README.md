@@ -1,6 +1,6 @@
 # UniRoam 🤖
 
-> *Where UniPwn meets autonomous roaming*
+> *Autonomous Robot Worm Framework - Built on Unipwn*
 
 <p align="center">
   <img src="https://img.shields.io/badge/Version-1.0-blue.svg" alt="Version">
@@ -93,16 +93,6 @@ python test_worm.py --benchmark
     └───────WiFi────────────┘
         Autonomous Spread
 ```
-
-## 🎨 C2 Dashboard Themes
-
-UniRoam features a modern web dashboard with three beautiful themes:
-
-- ☀️ **Light Mode** - Professional business interface
-- 🌙 **Dark Mode** - Sleek modern dark theme
-- 💀 **Hacker Mode** - Enhanced terminal aesthetic with CRT effects
-
-![Dashboard Preview](images/dashboard_preview.png)
 
 ## 🔬 Key Features
 
@@ -197,21 +187,6 @@ CC BY-NC-SA 4.0 (Non-Commercial, Share-Alike)
 
 This project maintains the original licensing from the UniPwn research. See [LICENSE](LICENSE) for details.
 
-## ⚖️ Legal Notice
-
-This software is for authorized security research only. Unauthorized use may violate:
-- Computer Fraud and Abuse Act (CFAA) - USA
-- Computer Misuse Act - UK  
-- Criminal Code - Canada
-- Similar laws in other jurisdictions
-
-**Always obtain explicit written permission before testing.**
-
-## 📞 Support
-
-- **Documentation**: See `docs/` directory
-- **Issues**: GitHub Issues (if published)
-- **Research**: Contact original CVE researchers
 
 ## 🌟 Acknowledgments
 
