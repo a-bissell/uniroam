@@ -1,6 +1,6 @@
 # UniRoam - Autonomous Robot Worm Framework
 
-> *"Where UniPwn meets autonomous roaming"*
+> *"This seems like a bad idea"*
 
 ## ⚠️ WARNING - RED TEAM RESEARCH TOOL
 
