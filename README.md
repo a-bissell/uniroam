@@ -17,27 +17,26 @@
 
 **UniRoam** is an autonomous robot worm framework for security research and red team operations. Built upon the [original UniPwn vulnerability research](https://github.com/Bin4ry/UniPwn), UniRoam demonstrates self-propagating malware capabilities targeting Unitree robotic platforms.
 
-## 🎯 What is UniRoam?
+## What is UniRoam?
 
 UniRoam extends the original CVE research (CVE-2025-35027, CVE-2025-60017, CVE-2025-60250, CVE-2025-60251) into a complete wormable attack framework featuring:
 
-- 🔄 **Autonomous Propagation** - Self-spreading via BLE and WiFi
-- 🎮 **Command & Control** - Full C2 infrastructure with web dashboard
-- 💾 **Multi-Stage Infection** - Sophisticated payload delivery system
-- 🔐 **Operational Security** - Traffic encryption, evasion, anti-forensics
-- 🧪 **Testing Framework** - Comprehensive simulation and benchmarking
-- 🛡️ **Defensive Tools** - Detection rules, IOCs, incident response guides
+- **Autonomous Propagation** - Self-spreading via BLE and WiFi
+- **Command & Control** - Full C2 infrastructure with web dashboard
+- **Multi-Stage Infection** - Sophisticated payload delivery system
+- **Operational Security** - Traffic encryption, evasion, anti-forensics
+- **Testing Framework** - Comprehensive simulation and benchmarking
+- **Defensive Tools** - Detection rules, IOCs, incident response guides
 
-## ⚠️ WARNING - Research Tool Only
+## WARNING - Research Tool Only
 
 **This is a RED TEAM RESEARCH TOOL.** 
-If not used carefully, containment can be tricky in target-rich envrionments. 
+If not used carefully, containment can be tricky in target-rich environments. 
 You may break your robot if you send a bad payload. 
 
-Be smart, be responsible. 
- 
+Be smart, be responsible.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -68,14 +67,13 @@ python test_worm.py --simulate
 python test_worm.py --benchmark
 ```
 
-## 📚 Documentation
+## Documentation
 
-- **[Complete Framework Guide](README_WORM.md)** - Full documentation
-- **[Defense Guide](DEFENSE_GUIDE.md)** - Detection, IOCs, and response
-- **[Deployment Guide](DEPLOYMENT.md)** - Setup and usage instructions
-- **[Implementation Summary](IMPLEMENTATION_SUMMARY.md)** - Technical overview
+- **[Complete Framework Guide](docs/README_WORM.md)** - Full documentation
+- **[Defense Guide](docs/DEFENSE_GUIDE.md)** - Detection, IOCs, and response
+- **[Deployment Guide](docs/DEPLOYMENT.md)** - Setup and usage instructions
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────┐
@@ -97,7 +95,7 @@ python test_worm.py --benchmark
         Autonomous Spread
 ```
 
-## 🔬 Key Features
+## Key Features
 
 ### Autonomous Propagation
 - BLE-based robot-to-robot infection
@@ -126,7 +124,7 @@ python test_worm.py --benchmark
 - Log cleaning
 - Anti-forensics capabilities
 
-## 📊 Performance
+## Performance
 
 Based on benchmark results:
 
@@ -135,7 +133,7 @@ Based on benchmark results:
 - **Payload Generation**: Sub-millisecond
 - **Stage 0 Dropper**: 141 bytes (minimal footprint)
 
-## 🛡️ Defensive Capabilities
+## Defensive Capabilities
 
 UniRoam includes comprehensive defensive tools:
 
@@ -145,7 +143,7 @@ UniRoam includes comprehensive defensive tools:
 - **Incident Response**: Complete IR playbooks
 - **Forensic Guides**: Memory, disk, and network analysis
 
-## 🎓 Educational Value
+## Educational Value
 
 UniRoam serves as a complete learning resource for:
 
@@ -156,7 +154,7 @@ UniRoam serves as a complete learning resource for:
 - Worm propagation techniques
 - C2 infrastructure design
 
-## 📖 Original Research
+## Original Research
 
 UniRoam is built upon the groundbreaking research by:
 
@@ -172,7 +170,7 @@ UniRoam is built upon the groundbreaking research by:
 - [CVE-2025-60250](https://cve.org/CVERecord?id=CVE-2025-60250)
 - [CVE-2025-60251](https://cve.org/CVERecord?id=CVE-2025-60251)
 
-## 🤝 Contributing
+## Contributing
 
 Contributions for defensive improvements are welcome:
 
@@ -184,14 +182,13 @@ Contributions for defensive improvements are welcome:
 
 **Focus areas**: Detection signatures, mitigation techniques, documentation improvements
 
-## 📄 License
+## License
 
 CC BY-NC-SA 4.0 (Non-Commercial, Share-Alike)
 
-This project maintains the original licensing from the UniPwn research. See [LICENSE](LICENSE) for details.
+This project maintains the original licensing from the UniPwn research. See LICENSE for details.
 
-
-## 🌟 Acknowledgments
+## Acknowledgments
 
 - Original UniPwn research team
 - Unitree Robotics (platform)

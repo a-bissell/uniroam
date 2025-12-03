@@ -1,12 +1,10 @@
 # Defensive Guide: Unitree Worm Detection & Response
 
-## 🎯 Executive Summary
+## Executive Summary
 
 This document provides comprehensive guidance for detecting, analyzing, and responding to Unitree worm infections. It is intended for security operations teams, incident responders, and system administrators responsible for Unitree robot deployments.
 
----
-
-## 📑 Table of Contents
+## Table of Contents
 
 1. [Indicators of Compromise (IOCs)](#indicators-of-compromise-iocs)
 2. [Detection Rules](#detection-rules)
@@ -15,9 +13,7 @@ This document provides comprehensive guidance for detecting, analyzing, and resp
 5. [Prevention & Hardening](#prevention--hardening)
 6. [Monitoring & Alerting](#monitoring--alerting)
 
----
-
-## 🔍 Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 
 ### File System Artifacts
 
@@ -169,9 +165,7 @@ WantedBy=multi-user.target
    - Persistent Python processes
    - Multiple concurrent BLE connections
 
----
-
-## 🚨 Detection Rules
+## Detection Rules
 
 ### YARA Rules
 
@@ -299,9 +293,7 @@ network where network.protocol == "http" and
   destination.ip != "192.168.0.0/16"
 ```
 
----
-
-## 🛡️ Incident Response Procedures
+## Incident Response Procedures
 
 ### Phase 1: Detection & Triage (0-15 minutes)
 
@@ -431,9 +423,7 @@ netstat -antp
 - What detection gaps exist?
 - What preventive measures needed?
 
----
-
-## 🔬 Forensic Analysis
+## Forensic Analysis
 
 ### Memory Analysis
 
@@ -543,9 +533,7 @@ tar czf "${EVIDENCE_DIR}.tar.gz" "$EVIDENCE_DIR"
 echo "[+] Evidence collected: ${EVIDENCE_DIR}.tar.gz"
 ```
 
----
-
-## 🔐 Prevention & Hardening
+## Prevention & Hardening
 
 ### Immediate Hardening Steps
 
@@ -640,9 +628,7 @@ aide --check
 # Monitor for unauthorized changes
 ```
 
----
-
-## 📊 Monitoring & Alerting
+## Monitoring & Alerting
 
 ### SIEM Integration
 
@@ -761,9 +747,7 @@ index=linux sourcetype=syslog "systemd" "unitree"
 }
 ```
 
----
-
-## 🚦 Threat Hunting
+## Threat Hunting
 
 ### Hunt Hypothesis 1: Dormant Infections
 
@@ -803,9 +787,7 @@ index=firewall
 | table src_ip, unique_dests
 ```
 
----
-
-## 📋 Checklist: Post-Incident Hardening
+## Checklist: Post-Incident Hardening
 
 - [ ] All infected robots identified and remediated
 - [ ] Network segmentation implemented
@@ -820,9 +802,7 @@ index=firewall
 - [ ] Lessons learned documented
 - [ ] Security awareness training updated
 
----
-
-## 📞 Escalation Contacts
+## Escalation Contacts
 
 ### Internal
 - **SOC**: soc@company.com / +1-555-SOC-TEAM
@@ -834,9 +814,7 @@ index=firewall
 - **CERT/CC**: cert@cert.org
 - **FBI IC3**: https://www.ic3.gov/
 
----
-
-## 📚 Additional Resources
+## Additional Resources
 
 - [MITRE ATT&CK - Persistence](https://attack.mitre.org/tactics/TA0003/)
 - [NIST Incident Response Guide](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
