@@ -24,7 +24,7 @@ The UniRoam simulator system allows you to test worm propagation without needing
 - **Safe Execution**: Sandboxed command execution
 - **C2 Integration**: Full integration with existing C2 dashboard
 
-###  Features
+### Features
 
 | Feature | Virtual Mode | Distributed Mode |
 |---------|--------------|------------------|
@@ -72,10 +72,8 @@ python run_virtual_sim.py -n 10 --auto-infect SIM_000
 
 Open the C2 dashboard and observe:
 - Robots appearing in the infected list
-- Simulators marked with 🤖 icon
+- Simulators marked with robot icon
 - Real-time infection status
-
----
 
 ## Virtual Mode
 
@@ -395,7 +393,7 @@ python run_virtual_sim.py -n 10
 
 Simulators are marked in the C2 dashboard:
 
-- **Icon**: 🤖 (simulator) vs 🦿 (real robot)
+- **Icon**: Robot icon (simulator) vs real robot icon
 - **Color**: Green border-left highlight
 - **Type Column**: Shows "SIM" or "REAL"
 
@@ -578,7 +576,7 @@ cp simulator_config.json configs/test_scenario_1.json
 
 ## Security Notes
 
-⚠️ **IMPORTANT**: Simulators are for controlled testing only!
+**IMPORTANT**: Simulators are for controlled testing only!
 
 - Run in isolated network
 - Don't expose C2 server to internet
@@ -646,8 +644,6 @@ For issues or questions:
 3. Check GitHub issues
 4. Enable debug mode for detailed logs
 
----
-
 **UniRoam v1.0 - Autonomous Robot Worm Framework**  
-*For authorized security research and testing only*
+For authorized security research and testing only
 

@@ -1,8 +1,8 @@
 # UniRoam Project Structure
 
-> Organized professional structure for the UniRoam framework
+Organized professional structure for the UniRoam framework
 
-## 📁 Directory Layout
+## Directory Layout
 
 ```
 uniroam/                          # Project root
@@ -49,7 +49,7 @@ uniroam/                          # Project root
 └── venv/                         # Python virtual environment (not tracked)
 ```
 
-## 🎯 Quick Start
+## Quick Start
 
 ### Run C2 Server
 ```bash
@@ -67,7 +67,7 @@ python run_tests.py --all
 python run_exploit.py --enable-ssh
 ```
 
-## 📦 Core Package (uniroam/)
+## Core Package (uniroam/)
 
 ### Module Descriptions
 
@@ -83,7 +83,7 @@ python run_exploit.py --enable-ssh
 | `opsec_utils.py` | OpSec | Encryption, evasion, anti-forensics |
 | `test_worm.py` | Testing | Unit tests, benchmarks, simulation |
 
-## 📚 Documentation (docs/)
+## Documentation (docs/)
 
 ### Available Documentation
 
@@ -113,7 +113,7 @@ python run_exploit.py --enable-ssh
    - Performance metrics
    - Learning outcomes
 
-## 🔬 Original Research (original_research/)
+## Original Research (original_research/)
 
 Preserved original UniPwn vulnerability research:
 
@@ -127,48 +127,48 @@ Preserved original UniPwn vulnerability research:
 - **h0stile** (Kevin Finisterre) - Co-Author
 - **legion1581** (Konstantin Severov) - PoC Contributor
 
-## 🚀 Features by Module
+## Features by Module
 
 ### Worm Agent (`worm_agent.py`)
-- ✅ Autonomous propagation
-- ✅ C2 communication with beaconing
-- ✅ Task execution engine
-- ✅ Intelligence gathering
-- ✅ Self-destruct capability
-- ✅ Dead man's switch
+- Autonomous propagation
+- C2 communication with beaconing
+- Task execution engine
+- Intelligence gathering
+- Self-destruct capability
+- Dead man's switch
 
 ### C2 Server (`c2_server.py`)
-- ✅ REST API (FastAPI)
-- ✅ SQLite database
-- ✅ Web dashboard (3 themes: Light/Dark/Hacker)
-- ✅ Real-time robot monitoring
-- ✅ Task queue system
-- ✅ Infection chain visualization
+- REST API (FastAPI)
+- SQLite database
+- Web dashboard (3 themes: Light/Dark/Hacker)
+- Real-time robot monitoring
+- Task queue system
+- Infection chain visualization
 
 ### Propagation Engine (`propagation_engine.py`)
-- ✅ BLE robot-to-robot infection
-- ✅ WiFi network discovery
-- ✅ Rate limiting (5/hour)
-- ✅ Infection tracking
-- ✅ Blacklist management
-- ✅ Network topology mapping
+- BLE robot-to-robot infection
+- WiFi network discovery
+- Rate limiting (5/hour)
+- Infection tracking
+- Blacklist management
+- Network topology mapping
 
 ### Persistence (`persistence.py`)
-- ✅ Systemd service
-- ✅ Cron jobs
-- ✅ RC.local modification
-- ✅ Watchdog process
-- ✅ Process obfuscation
-- ✅ Log cleaning
+- Systemd service
+- Cron jobs
+- RC.local modification
+- Watchdog process
+- Process obfuscation
+- Log cleaning
 
 ### OpSec Utilities (`opsec_utils.py`)
-- ✅ AES-GCM traffic encryption
-- ✅ DNS tunneling
-- ✅ Sandbox detection
-- ✅ Anti-forensics
-- ✅ Kill switch mechanisms
+- AES-GCM traffic encryption
+- DNS tunneling
+- Sandbox detection
+- Anti-forensics
+- Kill switch mechanisms
 
-## 📊 Statistics
+## Statistics
 
 | Metric | Value |
 |--------|-------|
@@ -178,7 +178,7 @@ Preserved original UniPwn vulnerability research:
 | Performance | 100k+ ops/sec |
 | Documentation | 2,500+ lines |
 
-## 🎨 Design Principles
+## Design Principles
 
 1. **Modular**: Each component is self-contained
 2. **Testable**: Comprehensive test suite included
@@ -186,7 +186,7 @@ Preserved original UniPwn vulnerability research:
 4. **Professional**: Production-quality code
 5. **Educational**: Designed for learning and research
 
-## 🔄 Import Structure
+## Import Structure
 
 All modules use absolute imports from the `uniroam` package:
 
@@ -196,7 +196,7 @@ from uniroam.exploit_lib import UnitreeExploit
 from uniroam.propagation_engine import WormPropagator
 ```
 
-## 📝 Version History
+## Version History
 
 ### v1.0.0 (January 2025)
 - Initial release as UniRoam
@@ -206,7 +206,7 @@ from uniroam.propagation_engine import WormPropagator
 - Comprehensive documentation
 - Full test suite
 
-## 🤝 Contributing
+## Contributing
 
 See main `README.md` for contribution guidelines.
 
@@ -216,7 +216,7 @@ Focus areas:
 - Performance improvements
 - Documentation enhancements
 
-## ⚖️ Legal
+## Legal
 
 **License**: CC BY-NC-SA 4.0 (Non-Commercial, Share-Alike)
 

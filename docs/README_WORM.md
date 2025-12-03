@@ -1,14 +1,10 @@
 # UniRoam - Autonomous Robot Worm Framework
 
-> *"This seems like a bad idea"*
-
-## ⚠️ WARNING - RED TEAM RESEARCH TOOL
+## WARNING - RED TEAM RESEARCH TOOL
 
 **UniRoam** is a **RED TEAM RESEARCH TOOL** designed to demonstrate wormable attack capabilities against Unitree robots for defensive research purposes. This framework should **ONLY** be used in controlled environments for security research, training, and developing defensive countermeasures.
 
 **DO NOT USE ON DEVICES YOU DO NOT OWN OR HAVE EXPLICIT PERMISSION TO TEST.**
-
----
 
 ## Table of Contents
 
@@ -73,8 +69,6 @@ This framework implements a complete wormable attack against Unitree robotic pla
     └────────────────────────────────────────────────┘
 ```
 
----
-
 ## Components
 
 ### Core Modules
@@ -98,9 +92,7 @@ This framework implements a complete wormable attack against Unitree robotic pla
 | `unitree_hack.py` | Original standalone exploit tool |
 | `README.md` | Original vulnerability research documentation |
 
----
-
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -147,8 +139,6 @@ export C2_OPERATOR_PASSWORD="your-admin-password"
 # 4. (Optional) Test framework
 python3 test_worm.py --all
 ```
-
----
 
 ## Usage
 
@@ -228,9 +218,7 @@ curl -X POST http://your-c2:8443/api/v1/operator/task \
 | `SELF_DESTRUCT` | Remove worm and clean traces |
 | `UPDATE_PAYLOAD` | Push new worm version |
 
----
-
-## 🔗 Attack Chain
+## Attack Chain
 
 ### Stage 0: Initial Compromise
 
@@ -267,9 +255,7 @@ Downloads full agent from C2 server.
 6. **Network Scanning** - Discover robots on same WiFi network
 7. **Repeat** - Continue until stopped
 
----
-
-## 🛡️ Defensive Analysis
+## Defensive Analysis
 
 ### Detection Strategies
 
@@ -315,9 +301,7 @@ ls -la /tmp/.unitree*
 ls -la /etc/unitree/
 ```
 
----
-
-## 🔍 Indicators of Compromise (IOCs)
+## Indicators of Compromise (IOCs)
 
 ### File System IOCs
 
@@ -368,8 +352,6 @@ Command Line:
 - Modified system logs (gaps in timestamps)
 - Cleared bash history
 - New systemd services
-
----
 
 ## Mitigation Strategies
 
@@ -425,10 +407,6 @@ Command Line:
    - Monitor for unusual BLE activity
    - Log all robot communications
    - Alert on new systemd services
-
-
----
-
 ## Testing & Validation
 
 ### Run Test Suite
@@ -455,24 +433,22 @@ export WORM_DEBUG=true
 python3 worm_agent.py --debug
 ```
 
----
-
 ## Legal & Ethical Considerations
 
 ### Responsible Use
 
 This framework is provided for:
-- ✅ Security research in controlled environments
-- ✅ Red team training and exercises
-- ✅ Developing defensive countermeasures
-- ✅ Educational purposes
-- ✅ Authorized penetration testing
+- Security research in controlled environments
+- Red team training and exercises
+- Developing defensive countermeasures
+- Educational purposes
+- Authorized penetration testing
 
 This framework is **NOT** for:
-- ❌ Unauthorized access to systems
-- ❌ Malicious attacks
-- ❌ Causing harm or disruption
-- ❌ Commercial exploitation without permission
+- Unauthorized access to systems
+- Malicious attacks
+- Causing harm or disruption
+- Commercial exploitation without permission
 
 ### Legal Notice
  **WARNING**: Unauthorized use of this software may violate laws including but not limited to:
@@ -493,8 +469,6 @@ CVEs assigned:
 - CVE-2025-60250
 - CVE-2025-60251
 
----
-
 ## Contributing
 
 Contributions for defensive improvements are welcome:
@@ -511,15 +485,11 @@ Focus areas:
 - Performance improvements
 - Documentation enhancements
 
----
-
 ## License
 
 This project maintains the original CC BY-NC-SA 4.0 license from the base research.
 
 **Non-Commercial Use Only** - See LICENSE file for details.
-
----
 
 ## Credits
 
@@ -527,9 +497,7 @@ This project maintains the original CC BY-NC-SA 4.0 license from the base resear
 
 **Worm Framework**: Built upon the original vulnerability research for defensive analysis purposes.
 
----
-
-## 📚 References
+## References
 
 - [Original Research Paper](https://arxiv.org/abs/2509.14139)
 - [CVE-2025-35027](https://takeonme.org/cves/cve-2025-35027/)
